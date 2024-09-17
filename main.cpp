@@ -4,8 +4,8 @@ constexpr int N_ELEMENTS = 100;
 
 int main()
 {
-    int *b = new int[NELEMENTS];
-    std::cout << '1-100 ertekek duplazasa'
+    int *b = new int[N_ELEMENTS]; // Szintaxis hiba 
+    std::cout << '1-100 ertekek duplazasa'; // Szintaxis hiba
     for (int i = 0;)
     {
         b[i] = i * 2;
