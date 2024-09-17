@@ -30,5 +30,8 @@ int main()
     std::cout << "Átlag: " << atlag << std::endl; 
 
     delete[] b; // memória felszabadítva
+
+    std::out << "Bucsuhazy Barni felulirasa";
+
     return 0;
 }
