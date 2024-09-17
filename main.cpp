@@ -4,23 +4,31 @@ constexpr int N_ELEMENTS = 100;
 
 int main()
 {
-    int *b = new int[N_ELEMENTS]; // Szintaxis hiba 
-    std::cout << '1-100 ertekek duplazasa'; // Szintaxis hiba
-    for (int i = 0;)
+    int *b = new int[N_ELEMENTS]; // NELEMENTS elírás javítva
+    std::cout << "1-100 értékek duplázása" << std::endl; // Sorvégén ; hiányzott 
+
+    // for loop kijavítva
+    for (int i = 0; i < N_ELEMENTS; i++)
     {
-        b[i] = i * 2;
+        b[i] = (i + 1) * 2; // tömb feltöltése a dupla értékekkel 
     }
-    for (int i = 0; i; i++)
+
+    // for loop javítva 
+    for (int i = 0; i < N_ELEMENTS; i++)
     {
-        std::cout << "Ertek:"
-    }    
-    std::cout << "Atlag szamitasa: " << std::endl;
-    int atlag;
-    for (int i = 0; i < N_ELEMENTS, i++)
-    {
-        atlag += b[i]
+        std::cout << "Érték: " << b[i] << std::endl; // minden egyes elem kiíratva
     }
-    atlag /= N_ELEMENTS;
-    std::cout << "Atlag: " << atlag << std::endl;
+
+    // javított átlagszámítás
+    int atlag = 0; // változó inicializáslása
+    for (int i = 0; i < N_ELEMENTS; i++)
+    {
+        atlag += b[i]; 
+    }
+    atlag /= N_ELEMENTS; 
+
+    std::cout << "Átlag: " << atlag << std::endl; 
+
+    delete[] b; // memória felszabadítva
     return 0;
 }
