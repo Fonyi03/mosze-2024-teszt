@@ -31,7 +31,7 @@ int main()
 
     delete[] b; // memória felszabadítva
 
-    std::out << "Bucsuhazy Barni felulirasa";
+    std::cout << "Bucsuhazy Barni felulirasa";
 
     return 0;
 }
